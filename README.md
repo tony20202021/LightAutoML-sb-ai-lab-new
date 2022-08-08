@@ -8,6 +8,7 @@
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 LightAutoML (LAMA) is an AutoML framework which provides automatic model creation for the following tasks:
+
 - binary classification
 - multiclass classification
 - regression
@@ -22,24 +23,30 @@ Multitable datasets and sequences are a work in progress :)
 **Documentation** of LightAutoML is available [here](https://lightautoml.readthedocs.io/), you can also [generate](https://github.com/AILab-MLTools/LightAutoML/blob/master/.github/CONTRIBUTING.md#building-documentation) it.
 
 # (New features) GPU and Spark pipelines
+
 Full GPU and Spark pipelines for LightAutoML currently available for developers testing (still in progress). The code and tutorials for:
+
 - GPU pipeline is [available here](https://github.com/Rishat-skoltech/LightAutoML_GPU)
 - Spark pipeline is [available here](https://github.com/sb-ai-lab/SLAMA)
 
 <a name="toc"></a>
+
 # Table of Contents
 
-* [Installation LightAutoML from PyPI](#installation)
-* [Quick tour](#quicktour)
-* [Resources](#examples)
-* [Contributing to LightAutoML](#contributing)
-* [License](#apache)
-* [For developers](#developers)
-* [Support and feature requests](#support)
+- [Installation LightAutoML from PyPI](#installation)
+- [Quick tour](#quicktour)
+- [Resources](#examples)
+- [Contributing to LightAutoML](#contributing)
+- [License](#apache)
+- [For developers](#developers)
+- [Support and feature requests](#support)
 
 <a name="installation"></a>
+
 # Installation
+
 To install LAMA framework on your machine from PyPI, execute following commands:
+
 ```bash
 
 # Install base functionality:
@@ -68,14 +75,18 @@ sudo yum install redhat-rpm-config libffi-devel cairo pango gdk-pixbuf2
 
 # Windows
 # follow this tutorial https://weasyprint.readthedocs.io/en/stable/install.html#windows
+
 ```
+
 [Back to top](#toc)
 
 <a name="quicktour"></a>
+
 # Quick tour
 
 Let's solve the popular Kaggle Titanic competition below. There are two main ways to solve machine learning problems using LightAutoML:
-* Use ready preset for tabular data:
+- Use ready preset for tabular data:
+
 ```python
 import pandas as pd
 from sklearn.metrics import f1_score
@@ -108,9 +119,10 @@ LighAutoML framework has a lot of ready-to-use parts and extensive customization
 [Back to top](#toc)
 
 <a name="examples"></a>
+
 # Resources
 
-### Kaggle kernel examples of LightAutoML usage:
+### Kaggle kernel examples of LightAutoML usage
 
 - [Tabular Playground Series April 2021 competition solution](https://www.kaggle.com/alexryzhkov/n3-tps-april-21-lightautoml-starter)
 - [Titanic competition solution (80% accuracy)](https://www.kaggle.com/alexryzhkov/lightautoml-titanic-love)
@@ -122,7 +134,7 @@ LighAutoML framework has a lot of ready-to-use parts and extensive customization
 - [Interpretable WhiteBox solution](https://www.kaggle.com/simakov/lama-whitebox-preset-example)
 - [Custom ML pipeline elements inside existing ones](https://www.kaggle.com/simakov/lama-custom-automl-pipeline-example)
 
-### Google Colab tutorials and [other examples](examples/):
+### Google Colab tutorials and [other examples](examples/)
 
 - [`Tutorial_1_basics.ipynb`](https://colab.research.google.com/github/AILab-MLTools/LightAutoML/blob/master/examples/tutorials/Tutorial_1_basics.ipynb) - get started with LightAutoML on tabular data.
 - [`Tutorial_2_WhiteBox_AutoWoE.ipynb`](https://colab.research.google.com/github/AILab-MLTools/LightAutoML/blob/master/examples/tutorials/Tutorial_2_WhiteBox_AutoWoE.ipynb) - creating interpretable models.
@@ -138,38 +150,43 @@ LighAutoML framework has a lot of ready-to-use parts and extensive customization
 
 ### Courses, videos and papers
 
-* **LightAutoML crash courses**:
-    - (Russian) [AutoML course for OpenDataScience community](https://ods.ai/tracks/automl-course-part1)
+- **LightAutoML crash courses**:
+  - (Russian) [AutoML course for OpenDataScience community](https://ods.ai/tracks/automl-course-part1)
 
-* **Video guides**:
-    - (Russian) [LightAutoML webinar for Sberloga community](https://www.youtube.com/watch?v=ci8uqgWFJGg) ([Alexander Ryzhkov](https://kaggle.com/alexryzhkov), [Dmitry Simakov](https://kaggle.com/simakov))
-    - (Russian) [LightAutoML hands-on tutorial in Kaggle Kernels](https://www.youtube.com/watch?v=TYu1UG-E9e8) ([Alexander Ryzhkov](https://kaggle.com/alexryzhkov))
-    - (English) [Automated Machine Learning with LightAutoML: theory and practice](https://www.youtube.com/watch?v=4pbO673B9Oo) ([Alexander Ryzhkov](https://kaggle.com/alexryzhkov))
-    - (English) [LightAutoML framework general overview, benchmarks and advantages for business](https://vimeo.com/485383651) ([Alexander Ryzhkov](https://kaggle.com/alexryzhkov))
-    - (English) [LightAutoML practical guide - ML pipeline presets overview](https://vimeo.com/487166940) ([Dmitry Simakov](https://kaggle.com/simakov))
+- **Video guides**:
+  - (Russian) [LightAutoML webinar for Sberloga community](https://www.youtube.com/watch?v=ci8uqgWFJGg) ([Alexander Ryzhkov](https://kaggle.com/alexryzhkov), [Dmitry Simakov](https://kaggle.com/simakov))
+  - (Russian) [LightAutoML hands-on tutorial in Kaggle Kernels](https://www.youtube.com/watch?v=TYu1UG-E9e8) ([Alexander Ryzhkov](https://kaggle.com/alexryzhkov))
+  - (English) [Automated Machine Learning with LightAutoML: theory and practice](https://www.youtube.com/watch?v=4pbO673B9Oo) ([Alexander Ryzhkov](https://kaggle.com/alexryzhkov))
+  - (English) [LightAutoML framework general overview, benchmarks and advantages for business](https://vimeo.com/485383651) ([Alexander Ryzhkov](https://kaggle.com/alexryzhkov))
+  - (English) [LightAutoML practical guide - ML pipeline presets overview](https://vimeo.com/487166940) ([Dmitry Simakov](https://kaggle.com/simakov))
 
-* **Papers**:
-    - Anton Vakhrushev, Alexander Ryzhkov, Dmitry Simakov, Rinchin Damdinov, Maxim Savchenko, Alexander Tuzhilin ["LightAutoML: AutoML Solution for a Large Financial Services Ecosystem"](https://arxiv.org/pdf/2109.01528.pdf). arXiv:2109.01528, 2021.
+- **Papers**:
+  - Anton Vakhrushev, Alexander Ryzhkov, Dmitry Simakov, Rinchin Damdinov, Maxim Savchenko, Alexander Tuzhilin ["LightAutoML: AutoML Solution for a Large Financial Services Ecosystem"](https://arxiv.org/pdf/2109.01528.pdf). arXiv:2109.01528, 2021.
 
-* **Articles about LightAutoML**:
-    - (English) [LightAutoML vs Titanic: 80% accuracy in several lines of code (Medium)](https://alexmryzhkov.medium.com/lightautoml-preset-usage-tutorial-2cce7da6f936)
-    - (English) [Hands-On Python Guide to LightAutoML – An Automatic ML Model Creation Framework (Analytic Indian Mag)](https://analyticsindiamag.com/hands-on-python-guide-to-lama-an-automatic-ml-model-creation-framework/?fbclid=IwAR0f0cVgQWaLI60m1IHMD6VZfmKce0ZXxw-O8VRTdRALsKtty8a-ouJex7g)
+- **Articles about LightAutoML**:
+  - (English) [LightAutoML vs Titanic: 80% accuracy in several lines of code (Medium)](https://alexmryzhkov.medium.com/lightautoml-preset-usage-tutorial-2cce7da6f936)
+  - (English) [Hands-On Python Guide to LightAutoML – An Automatic ML Model Creation Framework (Analytic Indian Mag)](https://analyticsindiamag.com/hands-on-python-guide-to-lama-an-automatic-ml-model-creation-framework/?fbclid=IwAR0f0cVgQWaLI60m1IHMD6VZfmKce0ZXxw-O8VRTdRALsKtty8a-ouJex7g)
 
 [Back to top](#toc)
 
 <a name="contributing"></a>
+
 # Contributing to LightAutoML
+
 If you are interested in contributing to LightAutoML, please read the [Contributing Guide](.github/CONTRIBUTING.md) to get started.
 
 [Back to top](#toc)
 
 <a name="apache"></a>
+
 # License
+
 This project is licensed under the Apache License, Version 2.0. See [LICENSE](https://github.com/AILab-MLTools/LightAutoML/blob/master/LICENSE) file for more details.
 
 [Back to top](#toc)
 
 <a name="developers"></a>
+
 # For developers
 
 ## Installation from source code
@@ -198,7 +215,7 @@ poetry lock
 poetry install
 ```
 
-## Build your own custom pipeline:
+## Build your own custom pipeline
 
 ```python
 import pandas as pd
@@ -270,7 +287,9 @@ pd.DataFrame({
 [Back to top](#toc)
 
 <a name="support"></a>
+
 # Support and feature requests
+
 Seek prompt advice at [Telegram group](https://t.me/lightautoml).
 
 Open bug reports and feature requests on GitHub [issues](https://github.com/AILab-MLTools/LightAutoML/issues).
