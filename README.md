@@ -7,7 +7,7 @@
 ![Read the Docs](https://img.shields.io/readthedocs/lightautoml?style=plastic)
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-LightAutoML (LAMA) is an AutoML framework which provides automatic model creation for the following tasks:
+LightAutoML (LAMA) is an AutoML framework which  provides automatic model creation for the following tasks:
 
 - binary classification
 - multiclass classification
