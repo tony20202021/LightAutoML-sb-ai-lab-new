@@ -39,7 +39,7 @@ pandas = [
   {version = "<=1.4.3", python = ">=3.8"}
 ]
 scikit-learn = ">=0.22"
-lightgbm = "^2.3"
+lightgbm = ">=2.3"
 catboost = ">=0.26.1"
 optuna = "*"
 torch = [
